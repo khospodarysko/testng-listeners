@@ -17,7 +17,11 @@ public class AnnotationTransformer implements IAnnotationTransformer {
         annotation.setThreadPoolSize(threads);
         annotation.setInvocationCount(runs);
         
-        System.out.println(String.format("Run method %s#%s with load: threads: %d, runs: %d", 
-            aClass.getSimpleName(), method.getName(), threads, runs));
+        System.out.println(String.format("Run method %s#%s with load: threads: %d, runs: %d",
+            method.getDeclaringClass().getSimpleName(), 
+            method.getName(), 
+            threads, 
+            runs
+        ));
     }
 }

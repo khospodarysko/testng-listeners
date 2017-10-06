@@ -13,6 +13,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <my.listener.load></my.listener.load> <!--com.kostya.AnnotationTransformer--> 
+    <my.listener.intercept></my.listener.intercept> <!--com.kostya.MethodInterceptor--> 
   </properties>
 
   <dependencies>
@@ -42,7 +43,7 @@
           <properties>
             <property>
               <name>listener</name>
-              <value>${my.listener.load}</value>
+              <value>${my.listener.load},${my.listener.intercept}</value>
             </property>
           </properties>
         </configuration>

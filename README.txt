@@ -5,6 +5,9 @@ Annotation Transformer
 - run disabled test
 - find long running tests (@Test timeOut)
 
+Method Interceptor
+- sort methods based on some logic (run long tests first, get time from previous runs) 
+
 Debug maven
 - -Dmaven.surefire.debug
 - localhost:port
@@ -12,5 +15,5 @@ Debug maven
 - click "debug" 
 
 TODO
-Method Interceptors
-TestNG Listeners
+
+- TestNG Listeners

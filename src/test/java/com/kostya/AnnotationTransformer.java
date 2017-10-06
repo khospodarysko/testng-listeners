@@ -11,8 +11,8 @@ public class AnnotationTransformer implements IAnnotationTransformer {
     public void transform(ITestAnnotation annotation, Class aClass, Constructor constructor, Method method) {
         System.out.println(getClass().getName());
         
-        int threads = Integer.valueOf(System.getProperty("threads"));
-        int runs = Integer.valueOf(System.getProperty("runs"));
+        int threads = Integer.valueOf(System.getProperty("threads", "1"));
+        int runs = Integer.valueOf(System.getProperty("runs", "1"));
         
         annotation.setThreadPoolSize(threads);
         annotation.setInvocationCount(runs);

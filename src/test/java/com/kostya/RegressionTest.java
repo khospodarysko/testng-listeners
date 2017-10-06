@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class LoadTest {
+public class RegressionTest {
     @Test
     public void a() throws InterruptedException {
         int seconds = ThreadLocalRandom.current().nextInt(10);

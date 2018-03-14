@@ -18,8 +18,10 @@ public class AnnotationTransformer implements IAnnotationTransformer {
         String toRunTest = System.getProperty("test");
         String processingTest = method.getDeclaringClass().getName() + "#" + method.getName();
 
-        if (!toRunTest.equals(processingTest)) {
-            return;
+        if (toRunTest != null) {
+            if (!toRunTest.equals(processingTest)) {
+                return;
+            }
         }
 
         int threads = Integer.valueOf(System.getProperty("threads", "1"));
